@@ -215,18 +215,7 @@
                 ></textarea>
               </label>
               <button id="submit" class="reveal">Submit</button>
-              <script>
-			const scriptURL = 'https://script.google.com/macros/s/AKfycbwcF-t_Ec4KEaWchDnDQfcPX1GlrP6s-9Zu52LLWYHWDcaWXKQkN10YnrcOCUQDGtzU/exec'
-			const form = document.forms['formName']
-		  
-			form.addEventListener('submit', e => {
-			  e.preventDefault()
-			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-				.then(response => alert("Thank you! your form is submitted successfully." ))
-				.then(() => {  window.location.reload(); })
-				.catch(error => console.error('Error!', error.message))
-			})
-		  </script>
+              
               <p class="reveal">or</p>
               <div class="reveal_more">
                 <a
@@ -257,5 +246,17 @@
       </div>
     </section>
     <script src="script.js" type="text/javascript"></script>
+	  <script>
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbwcF-t_Ec4KEaWchDnDQfcPX1GlrP6s-9Zu52LLWYHWDcaWXKQkN10YnrcOCUQDGtzU/exec'
+			const form = document.forms['formName']
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => alert("Thank you! your form is submitted successfully." ))
+				.then(() => {  window.location.reload(); })
+				.catch(error => console.error('Error!', error.message))
+			})
+		  </script>
   </body>
 </html>
